@@ -18,6 +18,7 @@ out/
 # release/
 
 # Gradle files
+.gradle
 .gradle/
 build/
 
@@ -83,3 +84,6 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+
+.DS_Store
+
