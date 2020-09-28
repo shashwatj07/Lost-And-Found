@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">LostAndFound</string>
+    <string name="already">Already a member?</string>
+    <string name="login">Log-In</string>
+    <string name="create">Create Your \nAcoount</string>
+    <string name="join">Join Us</string>
+    <string name="pressing">"By Pressing 'Join Us' You agree to our\n terms and conditions"</string>
+    <string name="arrow">Back arrow image</string>
+    <string name="your_name">Your Name</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="face">A happy face</string>
 </resources>
