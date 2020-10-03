@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class SplashActivity : AppCompatActivity() {
 
@@ -16,7 +18,12 @@ class SplashActivity : AppCompatActivity() {
 
     private val runnable = Runnable {
         if(!isFinishing) {
-            startActivity(Intent(applicationContext, SignupActivity::class.java))
+            if(Firebase.auth.currentUser == null) {
+                startActivity(Intent(applicationContext, SignupActivity::class.java))
+            }
+            else{
+                startActivity(Intent(applicationContext, MainActivity::class.java))
+            }
             finish()
         }
     }
