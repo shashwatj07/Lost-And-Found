@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/login_email"
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/login_password"
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
@@ -71,9 +71,10 @@
         android:paddingStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/login_email" />
 
     <Button
+        android:id="@+id/login_button"
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
@@ -85,5 +86,5 @@
         android:textColor="@color/fullwhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toBottomOf="@+id/login_password" />
 </androidx.constraintlayout.widget.ConstraintLayout>
