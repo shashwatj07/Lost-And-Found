@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/signup_name"
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:layout_marginTop="80dp"
@@ -86,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/signup_email"
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:layout_marginTop="20dp"
@@ -99,10 +99,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/signup_name" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/signup_password"
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:layout_marginTop="20dp"
@@ -114,7 +114,7 @@
         android:paddingStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/signup_email" />
 
     <Button
         android:id="@+id/joinus"
@@ -129,7 +129,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/signup_password" />
 
     <TextView
         android:layout_width="300dp"
