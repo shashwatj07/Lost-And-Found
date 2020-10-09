@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:id="@+id/nav_item_one"
+            android:icon="@drawable/ic_android"
+            android:title="My Profile" />
+        <item android:id="@+id/nav_item_two"
+            android:icon="@drawable/ic_android"
+            android:title="Lost Items" />
+        <item android:id="@+id/nav_item_three"
+            android:icon="@drawable/ic_android"
+            android:title="Reported Items" />
+        <item android:id="@+id/nav_item_four"
+            android:icon="@drawable/ic_android"
+            android:title="New Request" />
+        <item android:id="@+id/nav_item_five"
+            android:icon="@drawable/ic_android"
+            android:title="My Requests" />
+    </group>
+
+    <group android:id="@+id/group_menu">
+        <item android:id="@+id/nav_item_six"
+            android:title="Credits" />
+        <item android:id="@+id/nav_item_seven"
+            android:title="About" />
+        <item android:id="@+id/nav_item_eight"
+            android:title="IIT Bhilai" />
+        <item android:id="@+id/nav_item_nine"
+            android:title="Sign Out" />
+    </group>
+
+</menu>
