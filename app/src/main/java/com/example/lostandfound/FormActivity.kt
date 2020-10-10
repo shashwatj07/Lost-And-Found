@@ -40,7 +40,7 @@ class FormActivity : AppCompatActivity() {
             var tstamp= LocalDateTime.now().toString()
             val itemname:String = item_name.text.toString()
             val desecription:String = description.text.toString()
-            val date:String = dateid.text.toString()
+            val lostfoundDate:String = dateid.text.toString()
             val id = radiogroup.checkedRadioButtonId
             val radioButton=findViewById<RadioButton>(id)
             val posttype:String= radioButton.text.toString()
@@ -50,12 +50,14 @@ class FormActivity : AppCompatActivity() {
             }
             else{
                 val currentuser=user.uid
-                if(posttype.isEmpty()||desecription.isEmpty()||date.isEmpty()){
+                if(posttype.isEmpty()||desecription.isEmpty()||lostfoundDate.isEmpty()){
                     Toast.makeText(this@FormActivity, "Fields cannot be left blank", Toast.LENGTH_SHORT).show()
                 }
                 else{
-                    val form = formdataClass(currentuser,itemname,date,desecription,tstamp)
-                    database.child(posttype).push().setValue(form)
+                    val form = formdataClass(currentuser,itemname,lostfoundDate,desecription,tstamp)
+                    val key=database.child(posttype).push().key.toString()
+                    database.child(posttype).child(key).setValue(form)
+                    database.child("users").child(currentuser).child(posttype).push().setValue(key)
                     description.text.clear()
                     dateid.text.clear()
                     item_name.text.clear()

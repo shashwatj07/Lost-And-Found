@@ -35,19 +35,21 @@
         <RadioGroup
             android:id="@+id/radiogroup"
             android:layout_width="match_parent"
-            android:layout_height="95dp">
+            android:layout_height="81dp">
 
             <RadioButton
                 android:id="@+id/lostbutton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lost" />
+                android:text="Lost"
+                android:textSize="18sp" />
 
             <RadioButton
                 android:id="@+id/radioButton2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Found" />
+                android:text="Found"
+                android:textSize="18sp" />
         </RadioGroup>
 
         <TextView
@@ -69,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:gravity="bottom"
-            android:text=" Date"
+            android:text=" Date on which Lost/Found item"
             android:textAlignment="gravity"
             android:textSize="18sp" />
 
@@ -86,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:gravity="bottom"
-            android:text=" Description"
+            android:text=" Description (item properties,place,time,etc.)"
             android:textSize="18sp" />
 
         <EditText
