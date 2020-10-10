@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_form.*
+import java.time.LocalDateTime
 
 class FormActivity : AppCompatActivity() {
     lateinit var drawerLayout: DrawerLayout
@@ -36,6 +37,7 @@ class FormActivity : AppCompatActivity() {
         database = Firebase.database.reference
 
         postformbutton.setOnClickListener{
+            var tstamp= LocalDateTime.now().toString()
             val itemname:String = item_name.text.toString()
             val desecription:String = description.text.toString()
             val date:String = dateid.text.toString()
@@ -52,8 +54,8 @@ class FormActivity : AppCompatActivity() {
                     Toast.makeText(this@FormActivity, "Fields cannot be left blank", Toast.LENGTH_SHORT).show()
                 }
                 else{
-                    val form = formdataClass(date,desecription)
-                    database.child(posttype).child(currentuser).child(itemname).setValue(form)
+                    val form = formdataClass(currentuser,itemname,date,desecription,tstamp)
+                    database.child(posttype).push().setValue(form)
                     description.text.clear()
                     dateid.text.clear()
                     item_name.text.clear()
