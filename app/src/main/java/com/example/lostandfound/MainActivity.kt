@@ -51,9 +51,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.nav_item_two->{
-
-                    supportActionBar?.title="Inbox"
-                    drawerLayout.closeDrawers()
+                    startActivity(Intent(this@MainActivity, LostActivity::class.java))
                 }
                 R.id.nav_item_three->{
                     supportActionBar?.title="Find People"

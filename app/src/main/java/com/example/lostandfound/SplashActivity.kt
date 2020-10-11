@@ -22,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(Intent(applicationContext, SignupActivity::class.java))
             }
             else{
-                startActivity(Intent(applicationContext, MainActivity::class.java))
+                startActivity(Intent(applicationContext, LostActivity::class.java))
             }
             finish()
         }

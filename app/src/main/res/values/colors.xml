@@ -8,4 +8,7 @@
     <color name="fullwhite">#ffffff</color>
     <color name="lightblue">#1abc9c</color>
     <color name="purple">#2980b9</color>
+    <color name="chill">#1B9CFC</color>
+    <color name="breeze">#dff9fb</color>
+    <color name="white">#ffffff</color>
 </resources>

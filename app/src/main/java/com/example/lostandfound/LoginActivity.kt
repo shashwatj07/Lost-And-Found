@@ -43,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("SUCCESS", "signInWithEmail:success")
-                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                    val intent = Intent(this@LoginActivity, LostActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
                     Toast.makeText(baseContext, "Authentication successful.",
                         Toast.LENGTH_SHORT).show()
