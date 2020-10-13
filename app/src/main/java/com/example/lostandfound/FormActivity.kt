@@ -1,10 +1,12 @@
 package com.example.lostandfound
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.LinearLayout
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
@@ -15,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.widget.AppCompatRadioButton
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
@@ -24,7 +27,6 @@ import java.time.LocalDateTime
 
 class FormActivity : AppCompatActivity() {
     lateinit var drawerLayout: DrawerLayout
-    lateinit var linearLayout: LinearLayout
     lateinit var toolbar: Toolbar
     lateinit var navigationView: NavigationView
     var previousMenuItem: MenuItem?=null
@@ -68,9 +70,18 @@ class FormActivity : AppCompatActivity() {
                 }
             }
         }
+        //RADIO BTN UI
+        radioButton2.setOnClickListener(View.OnClickListener {
+            radioButton2.setTextColor(Color.WHITE)
+            lostbutton.setTextColor(Color.parseColor("#2980b9"))
+        })
+
+        lostbutton.setOnClickListener(View.OnClickListener {
+            lostbutton.setTextColor(Color.WHITE)
+            radioButton2.setTextColor(Color.parseColor("#2980b9"))
+        })
 
         drawerLayout = findViewById(R.id.drawer_layout)
-        linearLayout = findViewById(R.id.linearLayout)
         toolbar = findViewById(R.id.toolbar)
         navigationView = findViewById(R.id.navigationView)
         setUpToolbar()
@@ -135,6 +146,7 @@ class FormActivity : AppCompatActivity() {
             return@setNavigationItemSelectedListener true
         }
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id=item.itemId
         if(id==android.R.id.home)
