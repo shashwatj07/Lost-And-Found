@@ -12,6 +12,10 @@
         android:id="@+id/constraint_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
+
+        android:background="@color/breeze"
+
         tools:context=".LostActivity">
 
         <com.google.android.material.appbar.AppBarLayout
@@ -28,8 +32,10 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
                 app:titleTextColor="@color/black"
                 android:background="@color/breeze"
+                android:background="@color/colorPrimary"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark"
                 app:layout_scrollFlags="scroll|enterAlways" />

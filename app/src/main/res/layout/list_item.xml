@@ -7,11 +7,13 @@
     android:layout_margin="5dp"
     app:cardCornerRadius="5dp">
     <LinearLayout
+
         android:id="@+id/itemBox"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/chill"
         android:baselineAligned="false"
+
         android:paddingStart="50dp"
         android:orientation="vertical"
         android:padding="5dp">

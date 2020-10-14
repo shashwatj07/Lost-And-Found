@@ -41,6 +41,7 @@ class FoundActivity : AppCompatActivity() {
         database = Firebase.database.reference
         database.keepSynced(true)
         var colorList: MutableList<String> = arrayListOf("#81ecec","#74b9ff","#a29bfe","#00cec9","#0984e3","#6c5ce7")
+
         var lostItemsList: MutableList<Item> = arrayListOf()
         val postListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -54,6 +55,7 @@ class FoundActivity : AppCompatActivity() {
                     var person = "Found By: "+dataSnapshot.child("users").child(postById).child("name").value.toString()
                     var tstamp = "Posted at: "+item.child("tstamp").value.toString()
                     lostItemsList.add(Item(desc,lostFoundDate,person,itemName,tstamp,colorList[(0..5).random()]))
+
                 }
 //
 //                Log.i("Last mein","Main List of items are: $lostItemsList")
